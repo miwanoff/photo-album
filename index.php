@@ -59,9 +59,11 @@ krsort($photos);
     </form>
 
     <?php foreach($photos as $n=>$img) {?>
-    <p>
+    <div class="photo">
         <img src="<?php echo $img['url'] ?>" <?php echo $img['wh']?>
-            alt="Дoбaвлeнa <?php echo date("d.m.Y H:i:s", $img['time'])?><br><?php echo date("d.m.Y H:i:s", $img['time'])?></p>" />
-        <?php }?>
+            alt="Дoбaвлeнa <?php echo date("d.m.Y H:i:s", $img['time'])?>"> <br>
+        <p><?php echo date("d.m.Y H:i:s", $img['time'])?></p>
+    </div>
+    <?php }?>
 
 </body>
